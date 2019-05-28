@@ -15,25 +15,21 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := lavender
+PRODUCT_RELEASE_NAME := channel
 
 $(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    sys.usb.controller=a800000.dwc3 \
-    sys.usb.rndis.func.name=rndis_bam \
-    sys.usb.rmnet.func.name=rmnet_bam
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := omni_lavender
-PRODUCT_DEVICE := lavender
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi Note 7
+PRODUCT_NAME := omni_channel
+PRODUCT_DEVICE := channel
+PRODUCT_MANUFACTURER := motorola
+PRODUCT_BRAND := motorola
+PRODUCT_MODEL := moto g(7) play
 
-TARGET_VENDOR_PRODUCT_NAME := lavender
-TARGET_VENDOR_DEVICE_NAME := lavender
-PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=lavender PRODUCT_NAME=lavender
+TARGET_VENDOR_PRODUCT_NAME := channel
+TARGET_VENDOR_DEVICE_NAME := channel
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=channel PRODUCT_NAME=channel
